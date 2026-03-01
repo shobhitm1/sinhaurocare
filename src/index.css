@@ -1,0 +1,176 @@
+:root {
+  --primary: #0EA5E9;
+  --primary-dark: #0284C7;
+  --accent: #22D3EE;
+  --bg-light: #F8FAFC;
+  --bg-dark: #0F172A;
+  --text-light: #F1F5F9;
+  --text-dark: #0F172A;
+  --muted: #64748B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  transition: 0.4s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #0EA5E9, #22D3EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0EA5E9, #22D3EE);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(14,165,233,0.3);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* ================= DARK MODE ================= */
+
+body.dark {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Hero Section */
+body.dark .hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Services Section */
+body.dark .services-section {
+  background: #0f172a;
+}
+
+/* Generic Section */
+body.dark .section {
+  background: #0f172a;
+}
+
+/* Cards */
+body.dark .service-card,
+body.dark .testimonial-card,
+body.dark .modal-content {
+  background: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
+
+/* Text Colors */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p {
+  color: #f1f5f9;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background: #0b1220;
+}
+
+/* Footer */
+body.dark .footer {
+  background: #0b1220;
+}
+
+/* Buttons */
+body.dark .btn-outline {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+body.dark .btn-outline:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* ================= TESTIMONIAL DARK FIX ================= */
+
+body.dark #testimonials {
+  background: #0f172a;
+}
+
+body.dark .section-title {
+  color: #f1f5f9;
+}
+
+body.dark .testimonial-card {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark .testimonial-text {
+  color: #e2e8f0;
+}
+
+body.dark .testimonial-meta span {
+  color: #f1f5f9;
+}
+
+body.dark .google-reviews-link a {
+  color: #38bdf8;
+}

@@ -1,0 +1,103 @@
+.footer {
+  background: #0f172a;
+  color: #f1f5f9;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 15px;
+  color: #22d3ee;
+}
+
+.footer-column p {
+  margin-bottom: 10px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #22d3ee;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #1e293b;
+  font-size: 13px;
+  color: #94a3b8;
+}
+.footer-link {
+  color: #22d3ee;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 18px;
+  font-size: 22px;
+}
+
+.social-icons a {
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Individual hover colors */
+.social-icons a:nth-child(1):hover {
+  color: #E1306C; /* Instagram */
+}
+
+.social-icons a:nth-child(2):hover {
+  color: #FF0000; /* YouTube */
+}
+
+.social-icons a:nth-child(3):hover {
+  color: #4285F4; /* Google */
+}
+
+.social-icons a:nth-child(4):hover {
+  color: #25D366; /* WhatsApp */
+}
+
