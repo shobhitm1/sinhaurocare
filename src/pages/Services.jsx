@@ -69,6 +69,22 @@ function Services() {
             </p>
           </div>
 
+          <div className="service-card">
+  <h3>Uro Gynecology</h3>
+  <p>
+    Specialized care for female urological conditions including urinary
+    incontinence, pelvic floor disorders and bladder control issues.
+  </p>
+</div>
+
+<div className="service-card">
+  <h3>Pediatric Urology</h3>
+  <p>
+    Expert treatment for urological conditions in children including
+    congenital abnormalities, urinary infections and pediatric surgeries.
+  </p>
+</div>
+
         </div>
 
       </div>

@@ -127,7 +127,7 @@ function Home({ language }) {
               </div>
 
               <div>
-                <h3>15+</h3>
+                <h3>15</h3>
                 <p>
                   {language === "en"
                     ? "Years Experience"
@@ -158,7 +158,7 @@ function Home({ language }) {
               <div className="doctor-overlay">
                 <h3>Dr. Somit Kumar Sinha</h3>
                 <p>M.Ch Urology Specialist</p>
-                <p>15+ Years Experience</p>
+                <p>15 Years Experience</p>
                 <p>
                   {language === "en"
                     ? "Expert in Advanced Urological Care"
@@ -239,17 +239,20 @@ function Home({ language }) {
           </Swiper>
 
           <div className="google-reviews-link">
-            <a
-              href="https://search.google.com/local/reviews?placeid=ChIJRx6oFXBFkTkRAuX_7J81ogg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ⭐⭐⭐⭐⭐{" "}
-              {language === "en"
-                ? "View All Reviews on Google"
-                : "सभी गूगल रिव्यू देखें"}
-            </a>
-          </div>
+  <a
+    href="https://search.google.com/local/reviews?placeid=ChIJRx6oFXBFkTkRAuX_7J81ogg"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="google-btn"
+  >
+    <span className="stars">⭐⭐⭐⭐⭐</span>
+    <span className="text">
+      {language === "en"
+        ? "View All Reviews on Google"
+        : "सभी गूगल रिव्यू देखें"}
+    </span>
+  </a>
+</div>
         </div>
       </section>
     </>

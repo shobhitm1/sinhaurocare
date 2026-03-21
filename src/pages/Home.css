@@ -1,6 +1,6 @@
 /* ================= HERO ================= */
 .hero {
-  padding: 120px 0;
+  padding: 100px 0;
   background: linear-gradient(135deg, #f8fbff, #e6f4ff);
 }
 
@@ -8,21 +8,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 80px;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
 .hero-left {
   flex: 1;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .hero-left h1 {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: 25px;
-  color: #0f172a;
+  margin-bottom: 20px;
 }
 
 .hero-left span {
@@ -30,108 +28,132 @@
 }
 
 .hero-left p {
-  font-size: 18px;
+  font-size: 16px;
   color: #475569;
-  margin-bottom: 35px;
-  max-width: 540px;
+  margin-bottom: 25px;
 }
 
 /* ================= BUTTONS ================= */
 
 .hero-buttons {
   display: flex;
-  gap: px;
-  margin-bottom: 45px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
-.btn-primary {
-  padding: 14px 32px;
-  background: linear-gradient(135deg, #0ea5e9, #22d3ee);
-  border: none;
+.btn-primary,
+.btn-outline {
+  padding: 12px 26px;
   border-radius: 50px;
-  color: white;
   font-weight: 600;
-  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+  color: white;
+  border: none;
 }
 
 .btn-outline {
-  padding: 14px 32px;
   border: 2px solid #0ea5e9;
-  background: transparent;
-  border-radius: 50px;
   color: #0ea5e9;
-  font-weight: 600;
-  cursor: pointer;
   text-decoration: none;
-  display: inline-block;
 }
 
 /* ================= HERO STATS ================= */
 
 .hero-stats {
   display: flex;
-  gap: 50px;
+  gap: 30px;
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
 .hero-stats h3 {
-  font-size: 26px;
   color: #0ea5e9;
 }
 
-.hero-stats p {
-  font-size: 14px;
-  color: #64748b;
-}
-
-/* ================= DOCTOR IMAGE ================= */
+/* ================= DOCTOR CARD ================= */
 
 .hero-right {
   flex: 1;
-  min-width: 320px;
   display: flex;
   justify-content: center;
 }
 
 .doctor-card {
-  width: 380px;
-  height: 480px;
-  border-radius: 24px;
+  position: relative;
+  width: 340px;
+  border-radius: 20px;
   overflow: hidden;
-  background: white;
+}
+
+.doctor-img {
+  width: 100%;
+  display: block;
+}
+
+/* Overlay (Desktop only) */
+.doctor-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.9);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: 0.4s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.doctor-card:hover .doctor-overlay {
+  opacity: 1;
 }
 
 /* ================= SECTION ================= */
 
 .section {
-  padding: 120px 0;
+  padding: 90px 0;
 }
 
 .section-title {
   text-align: center;
-  font-size: 40px;
-  margin-bottom: 80px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0ea5e9, #22d3ee);
+  display: block;
+  margin: 10px auto 0;
 }
 
 /* ================= SERVICES ================= */
 
 .services-section {
-  padding: 120px 0;
   background: #f1f5f9;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 25px;
 }
 
 .service-card {
   background: white;
-  padding: 45px 25px;
-  border-radius: 20px;
+  padding: 35px 20px;
+  border-radius: 18px;
   text-align: center;
 }
 
@@ -142,35 +164,91 @@
 }
 
 .testimonial-card {
+  background: white;
   padding: 40px 25px;
+  border-radius: 20px;
+  max-width: 750px;
+  margin: auto;
   text-align: center;
+}
+
+.testimonial-text {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #475569;
 }
 
 .testimonial-meta {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
 }
 
-/* 🔥 FIXED GOOGLE BUTTON */
+.testimonial-name {
+  font-weight: 600;
+}
 
-.google-reviews-link a {
-  display: block;
-  width: 100%;
+.testimonial-stars {
+  color: #fbbf24;
+}
+
+/* ================= GOOGLE BUTTON ================= */
+
+.google-reviews-link {
   text-align: center;
-  padding: 14px 20px;
-  font-size: 14px;
-  line-height: 1.4;
-  background: #0ea5e9;
-  color: white;
+}
+
+.google-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 90%;
+  max-width: 350px;
+  margin: 20px auto;
+
+  padding: 14px;
   border-radius: 50px;
+
+  background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+  color: white;
   text-decoration: none;
+}
+
+.google-btn .stars {
+  font-size: 16px;
+}
+
+.google-btn .text {
+  font-size: 13px;
+  margin-top: 4px;
 }
 
 /* ================= YOUTUBE ================= */
 
+.youtube-section {
+  text-align: center;
+}
+
 .youtube-card iframe {
   width: 100%;
-  height: 250px;
+  height: 260px;
+  border-radius: 12px;
+}
+
+.youtube-channel-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.youtube-channel-link a {
+  padding: 12px 22px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+  color: white;
+  text-decoration: none;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -182,15 +260,6 @@
     text-align: center;
   }
 
-  .hero-stats {
-    justify-content: center;
-  }
-
-  .doctor-card {
-    width: 100%;
-    height: auto;
-  }
-
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -199,16 +268,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .hero-left h1 {
-    font-size: 32px;
-  }
-
-  .hero-left p {
-    font-size: 16px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-    gap: 12px;
+    font-size: 30px;
   }
 
   .btn-primary,
@@ -218,32 +278,33 @@
 
   .testimonial-meta {
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 600px) {
-  .hero-left h1 {
-    font-size: 26px;
-  }
-
-  .section-title {
-    font-size: 24px;
-  }
-
-  .hero,
-  .section {
-    padding: 60px 0;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
   }
 
-  .testimonial-card {
-    padding: 25px;
+  /* 🔥 MOBILE DOCTOR FIX */
+  .doctor-overlay {
+    position: static;
+    opacity: 1;
+    background: transparent;
+    color: #0f172a;
+  }
+
+  .doctor-card {
+    text-align: center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .section {
+    padding: 60px 0;
   }
 
   .youtube-card iframe {
