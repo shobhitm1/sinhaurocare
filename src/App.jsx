@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import YoutubeSection from "./pages/YoutubeSection";
 import WhatsAppButton from "./components/WhatsAppButton";
+import SurgeryGallery from "./pages/SurgeryGallery";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,6 +32,7 @@ function App() {
       <Home language={language} />
       <Services language={language} />
       <About language={language} />
+      <SurgeryGallery language={language} />
       <YoutubeSection language={language} />
       <Footer language={language} />
 

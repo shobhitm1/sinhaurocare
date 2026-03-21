@@ -1,0 +1,87 @@
+/* ================= SECTION ================= */
+
+.surgery-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+/* ================= SLIDER ================= */
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 8); /* 4 images * 2 */
+  animation: scroll 20s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  margin-right: 20px;
+}
+
+.slide img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+
+.slide img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 4));
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .slide {
+    width: 200px;
+  }
+
+  .slide img {
+    height: 150px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .slide {
+    width: 160px;
+  }
+
+  .slide img {
+    height: 120px;
+  }
+
+  .slide-track {
+    animation: scroll 25s linear infinite;
+  }
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark .surgery-section {
+  background: #0f172a;
+}
+
+body.dark .slide img {
+  border: 1px solid #1e293b;
+}
