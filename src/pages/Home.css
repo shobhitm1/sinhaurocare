@@ -151,10 +151,20 @@
 }
 
 .service-card {
-  background: white;
-  padding: 35px 20px;
+  background: #e2e8f0;   /* 🔥 darker grey */
+  padding: 40px 25px;
   border-radius: 18px;
   text-align: center;
+
+  transition: 0.3s ease;
+  border: 1px solid #cbd5e1;
+}
+
+/* Hover */
+.service-card:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* ================= TESTIMONIAL ================= */
@@ -310,4 +320,21 @@
   .youtube-card iframe {
     height: 200px;
   }
+}
+body.dark .service-card {
+  background: #0f172a;   /* 🔥 proper dark */
+  border: 1px solid #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark .service-card p {
+  color: #cbd5e1;
+}
+
+body.dark .service-card:hover {
+  background: #020617;   /* even darker hover */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+section {
+  scroll-margin-top: 100px;   /* adjust based on navbar height */
 }

@@ -41,25 +41,25 @@ export default function About({ language }) {
           <br />
 
           <h3 style={{ color: "#0ea5e9" }}>
-            {language === "en" ? "Educational Journey" : "शैक्षणिक योग्यता"}
+            {language === "en" ? <u>Educational Journey</u> : "शैक्षणिक योग्यता"}
           </h3>
 
           <ul>
             <li>
-              MBBS – B.R.D. Medical College, Gorakhpur
+              <b>MBBS</b> – B.R.D. Medical College, Gorakhpur
             </li>
             <li>
-              MS (General Surgery) – Uttar Pradesh University of Medical Sciences, Saifai
+              <b>MS (General Surgery)</b> – Uttar Pradesh University of Medical Sciences,Saifai
             </li>
-            <li>
-              M.Ch (Urology Super-Specialization) – Sardar Patel Medical College, Bikaner
+            <li>  
+              <b>M.Ch (Urology Super-Specialization)</b> – Sardar Patel Medical College,Bikaner
             </li>
           </ul>
 
           <br />
 
           <h3 style={{ color: "#0ea5e9" }}>
-            {language === "en" ? "Areas of Expertise" : "विशेषज्ञता के क्षेत्र"}
+            {language === "en" ? <u>Areas of Expertise</u> : "विशेषज्ञता के क्षेत्र"}
           </h3>
 
           <ul>
@@ -67,6 +67,7 @@ export default function About({ language }) {
             <li>{language === "en" ? "Andrology" : "एंड्रोलॉजी"}</li>
             <li>{language === "en" ? "Endourology" : "एंडोयूरोलॉजी"}</li>
             <li>{language === "en" ? "Pediatric Urology" : "बाल मूत्ररोग"}</li>
+            <li>{language === "en" ? "Uro Gynecology" : "यूरो गायनेकोलॉजी"}</li>
             <li>{language === "en" ? "Uro-Oncology" : "यूरो ऑन्कोलॉजी"}
             </li>
           </ul>
@@ -76,8 +77,8 @@ export default function About({ language }) {
           <p>
             {language === "en" ? (
               <>
-                Dr. Sinha has successfully performed <strong>1200+ surgeries</strong>
-                across various urological conditions and brings years of practical excellence.
+                Dr. Sinha has successfully performed <strong>1200+ surgeries </strong>
+                 across various urological conditions and brings years of practical excellence.
               </>
             ) : (
               <>

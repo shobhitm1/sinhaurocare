@@ -49,8 +49,8 @@ function Home({ language }) {
       title: language === "en" ? "Andrology" : "एंड्रोलॉजी",
       desc:
         language === "en"
-          ? "Specialized management of male infertility, erectile dysfunction and reproductive health."
-          : "पुरुष बांझपन, इरेक्टाइल डिसफंक्शन और पुरुष प्रजनन स्वास्थ्य का विशेषज्ञ उपचार।"
+          ? "Specialized management of male infertility and reproductive health."
+          : "पुरुष बांझपन और प्रजनन स्वास्थ्य का विशेषज्ञ उपचार।"
     },
     {
       title: language === "en" ? "Pediatric Urology" : "बाल मूत्ररोग",
@@ -70,14 +70,14 @@ function Home({ language }) {
       title: language === "en" ? "Uro Gynecology" : "यूरो गायनेकोलॉजी",
       desc:
         language === "en"
-          ? "Advanced care for female urinary incontinence and pelvic floor disorders."
-          : "महिलाओं में पेशाब की समस्या और पेल्विक फ्लोर विकारों का उन्नत उपचार।"
+          ? "Advanced care for female urinary issues and pelvic disorders."
+          : "महिलाओं में मूत्र समस्याओं और पेल्विक विकारों का उन्नत उपचार।"
     }
   ];
 
   return (
     <>
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section id="home" className="hero">
         <div className="container hero-wrapper">
 
@@ -104,56 +104,37 @@ function Home({ language }) {
 
             <div className="hero-buttons">
               <button className="btn-primary">
-                {language === "en"
-                  ? "Book Appointment"
-                  : "अपॉइंटमेंट बुक करें"}
+                {language === "en" ? "Book Appointment" : "अपॉइंटमेंट बुक करें"}
               </button>
 
+              {/* 🔥 FIXED LINK */}
               <a href="#services" className="btn-outline">
-                {language === "en"
-                  ? "Our Services"
-                  : "हमारी सेवाएं"}
+                {language === "en" ? "Our Services" : "हमारी सेवाएं"}
               </a>
             </div>
 
             <div className="hero-stats">
               <div>
                 <h3>10,000+</h3>
-                <p>
-                  {language === "en"
-                    ? "Patients Treated"
-                    : "उपचारित मरीज"}
-                </p>
+                <p>{language === "en" ? "Patients Treated" : "उपचारित मरीज"}</p>
               </div>
 
               <div>
                 <h3>15</h3>
-                <p>
-                  {language === "en"
-                    ? "Years Experience"
-                    : "वर्षों का अनुभव"}
-                </p>
+                <p>{language === "en" ? "Years Experience" : "वर्षों का अनुभव"}</p>
               </div>
 
               <div>
                 <h3>2500+</h3>
-                <p>
-                  {language === "en"
-                    ? "Successful Surgeries"
-                    : "सफल सर्जरी"}
-                </p>
+                <p>{language === "en" ? "Successful Surgeries" : "सफल सर्जरी"}</p>
               </div>
             </div>
           </div>
 
-          {/* DOCTOR IMAGE */}
+          {/* DOCTOR */}
           <div className="hero-right">
             <div className="doctor-card">
-              <img
-                src={doctor}
-                alt="Dr. Somit Kumar Sinha"
-                className="doctor-img"
-              />
+              <img src={doctor} alt="Doctor" className="doctor-img" />
 
               <div className="doctor-overlay">
                 <h3>Dr. Somit Kumar Sinha</h3>
@@ -171,13 +152,11 @@ function Home({ language }) {
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* 🔥 SERVICES (SPECIALIZATIONS) */}
       <section id="services" className="services-section">
         <div className="container">
           <h2 className="section-title">
-            {language === "en"
-              ? "Our Specializations"
-              : "हमारी विशेषज्ञताएँ"}
+            {language === "en" ? "Our Specializations" : "हमारी विशेषज्ञताएँ"}
           </h2>
 
           <Swiper
@@ -185,7 +164,7 @@ function Home({ language }) {
             spaceBetween={30}
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000 }}
-            loop={true}
+            loop
             breakpoints={{
               0: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
@@ -208,9 +187,7 @@ function Home({ language }) {
       <section id="testimonials" className="section">
         <div className="container">
           <h2 className="section-title">
-            {language === "en"
-              ? "Patient Testimonials"
-              : "मरीजों की प्रतिक्रिया"}
+            {language === "en" ? "Patient Testimonials" : "मरीजों की प्रतिक्रिया"}
           </h2>
 
           <Swiper
@@ -218,17 +195,15 @@ function Home({ language }) {
             spaceBetween={30}
             pagination={{ clickable: true }}
             autoplay={{ delay: 3500 }}
-            loop={true}
+            loop
           >
             {reviews.map((review, index) => (
               <SwiperSlide key={index}>
                 <div className="testimonial-card">
-                  <p className="testimonial-text">
-                    “{review.text}”
-                  </p>
+                  <p className="testimonial-text">“{review.text}”</p>
 
                   <div className="testimonial-meta">
-                    <span>{review.name}</span>
+                    <span className="testimonial-name">{review.name}</span>
                     <span className="testimonial-stars">
                       {"⭐".repeat(review.rating)}
                     </span>
@@ -238,21 +213,23 @@ function Home({ language }) {
             ))}
           </Swiper>
 
+          {/* GOOGLE REVIEWS BUTTON */}
           <div className="google-reviews-link">
-  <a
-    href="https://search.google.com/local/reviews?placeid=ChIJRx6oFXBFkTkRAuX_7J81ogg"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="google-btn"
-  >
-    <span className="stars">⭐⭐⭐⭐⭐</span>
-    <span className="text">
-      {language === "en"
-        ? "View All Reviews on Google"
-        : "सभी गूगल रिव्यू देखें"}
-    </span>
-  </a>
-</div>
+            <a
+              href="https://search.google.com/local/reviews?placeid=ChIJRx6oFXBFkTkRAuX_7J81ogg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="google-btn"
+            >
+              <span className="stars">⭐⭐⭐⭐⭐</span>
+              <span className="text">
+                {language === "en"
+                  ? "View All Reviews on Google"
+                  : "सभी गूगल रिव्यू देखें"}
+              </span>
+            </a>
+          </div>
+
         </div>
       </section>
     </>
