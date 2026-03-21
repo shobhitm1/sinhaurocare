@@ -77,13 +77,13 @@ export default function About({ language }) {
           <p>
             {language === "en" ? (
               <>
-                Dr. Sinha has successfully performed <strong>1200+ surgeries </strong>
+                Dr. Sinha has successfully performed <strong>2500+ surgeries </strong>
                  across various urological conditions and brings years of practical excellence.
               </>
             ) : (
               <>
                 डॉ. सिन्हा ने विभिन्न मूत्ररोग समस्याओं में
-                <strong> 1200+ सफल सर्जरी</strong> की हैं और वर्षों का
+                <strong> 2500+ सफल सर्जरी</strong> की हैं और वर्षों का
                 व्यावहारिक अनुभव रखते हैं।
               </>
             )}

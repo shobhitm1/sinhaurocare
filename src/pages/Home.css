@@ -338,3 +338,13 @@ body.dark .service-card:hover {
 section {
   scroll-margin-top: 100px;   /* adjust based on navbar height */
 }
+.btn-primary {
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+  color: white;
+  border: none;
+  text-decoration: none;   /* 🔥 important */
+  display: inline-block;   /* 🔥 anchor ko button jaisa banata hai */
+}

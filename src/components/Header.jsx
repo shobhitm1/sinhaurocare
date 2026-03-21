@@ -18,7 +18,7 @@ function Header({ darkMode, setDarkMode, language, setLanguage }) {
 
         <nav className="nav-links">
           <a href="/">Home</a>
-          <a href="#services">Specialisations</a>
+          <a href="#specializations">Specialisations</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>

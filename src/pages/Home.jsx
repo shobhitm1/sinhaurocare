@@ -9,6 +9,16 @@ import "swiper/css/pagination";
 
 function Home({ language }) {
 
+  const whatsappMessage =
+    "Hello Sinha Uro Care, I would like to take an appointment with the doctor.";
+
+  const whatsappLink = (lang) =>
+    lang === "en"
+      ? `https://wa.me/919473821013?text=${encodeURIComponent(whatsappMessage)}`
+      : `https://wa.me/919473821013?text=${encodeURIComponent(
+          "नमस्ते सिन्हा यूरो केयर, मुझे डॉक्टर से अपॉइंटमेंट लेनी है।"
+        )}`;
+
   const reviews = [
     {
       name: "Ravi Kumar",
@@ -103,14 +113,23 @@ function Home({ language }) {
             </p>
 
             <div className="hero-buttons">
-              <button className="btn-primary">
-                {language === "en" ? "Book Appointment" : "अपॉइंटमेंट बुक करें"}
-              </button>
 
-              {/* 🔥 FIXED LINK */}
+              {/* 🔥 WHATSAPP BUTTON FIX */}
+              <a
+                href={whatsappLink(language)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                {language === "en"
+                  ? "Book Appointment"
+                  : "अपॉइंटमेंट बुक करें"}
+              </a>
+
               <a href="#services" className="btn-outline">
                 {language === "en" ? "Our Services" : "हमारी सेवाएं"}
               </a>
+
             </div>
 
             <div className="hero-stats">
@@ -152,7 +171,7 @@ function Home({ language }) {
         </div>
       </section>
 
-      {/* 🔥 SERVICES (SPECIALIZATIONS) */}
+      {/* SPECIALIZATIONS */}
       <section id="specializations" className="services-section">
         <div className="container">
           <h2 className="section-title">
@@ -213,7 +232,6 @@ function Home({ language }) {
             ))}
           </Swiper>
 
-          {/* GOOGLE REVIEWS BUTTON */}
           <div className="google-reviews-link">
             <a
               href="https://search.google.com/local/reviews?placeid=ChIJRx6oFXBFkTkRAuX_7J81ogg"
