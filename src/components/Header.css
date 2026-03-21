@@ -2,7 +2,7 @@
 
 .navbar {
   background: #0f172a;
-  padding: 18px 0;
+  padding: 16px 0;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
@@ -79,11 +79,10 @@
   padding: 6px 0;
 }
 
+/* Hover (desktop) */
 .nav-links a:hover {
   color: #22d3ee;
 }
-
-/* underline animation */
 
 .nav-links a::after {
   content: "";
@@ -98,6 +97,16 @@
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+/* ================= MOBILE TAP EFFECT 🔥 ================= */
+
+.nav-links a:active::after {
+  width: 100%;
+}
+
+.nav-links a:active {
+  color: #22d3ee;
 }
 
 /* ================= TOGGLE BUTTONS ================= */
@@ -123,9 +132,8 @@
   color: white;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= Tablet ================= */
 
-/* Tablet */
 @media (max-width: 992px) {
   .logo-img {
     height: 55px;
@@ -137,34 +145,61 @@
   }
 }
 
-/* ================= Mobile changes ================= */
+/* ================= MOBILE FINAL ================= */
+
 @media (max-width: 768px) {
+
+  .navbar {
+    padding: 10px 0;
+  }
+
   .nav-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    gap: 10px;
+    padding: 0 12px;
   }
 
   .logo-wrapper {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    gap: 8px;
   }
 
-  .logo-text {
-    text-align: center;
+  .logo-img {
+    height: 42px;
+    width: 42px;
   }
 
-  .nav-links {
-    display: flex;   /* 🔥 show links again */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+  .logo-text h1 {
+    font-size: 16px;
   }
 
+  /* KEEP TEXT SMALL */
+  .logo-text p,
+  .doctor-name {
+    font-size: 10px;
+  }
+
+  /* CENTER BUTTONS */
   .toggle-wrapper {
+    width: 100%;
     justify-content: center;
-    margin: 10px 0;
+    margin-top: 6px;
+  }
+
+  .toggle-btn {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  /* NAV LINKS */
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 6px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 8px;
   }
 }

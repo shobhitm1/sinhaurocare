@@ -153,7 +153,7 @@ function Home({ language }) {
       </section>
 
       {/* 🔥 SERVICES (SPECIALIZATIONS) */}
-      <section id="services" className="services-section">
+      <section id="specializations" className="services-section">
         <div className="container">
           <h2 className="section-title">
             {language === "en" ? "Our Specializations" : "हमारी विशेषज्ञताएँ"}
