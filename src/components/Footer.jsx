@@ -9,7 +9,7 @@ function Footer({ language }) {
   const message =
     language === "en"
       ? "Hello, I would like to book an appointment at Sinha Urocare."
-      : "नमस्ते, मैं सिन्हा यूरोकेयर में अपॉइंटमेंट बुक करना चाहता/चाहती हूँ।";
+      : "नमस्ते, मैं सिन्हा यूरोकेयर में अपॉइंटमेंट लेना चाहता/चाहती हूँ। कृपया मार्गदर्शन करें।";
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -19,12 +19,12 @@ function Footer({ language }) {
 
         {/* Column 1 - About + Social */}
         <div className="footer-column">
-          <h3>Sinha Urocare</h3>
+          <h3><u>Sinha Urocare</u></h3>
 
           <p>
             {language === "en"
               ? "Sinha Urocare is a leading urology clinic in Gorakhpur, offering advanced diagnosis and treatment for kidney stones, prostate enlargement (BPH), urinary tract infections (UTI), male infertility, and bladder & kidney tumors. Led by Dr. Somit Kumar Sinha (M.Ch Urology), we combine modern technology, surgical precision, and compassionate patient care to deliver trusted urological solutions."
-              : "सिन्हा यूरोकेयर गोरखपुर की एक अग्रणी मूत्ररोग क्लिनिक है, जहाँ किडनी स्टोन, प्रोस्टेट बढ़ना (BPH), यूरिन इन्फेक्शन (UTI), पुरुष बांझपन तथा ब्लैडर एवं किडनी ट्यूमर का आधुनिक उपचार उपलब्ध है। डॉ. सोमित कुमार सिन्हा (M.Ch Urology) के नेतृत्व में हम आधुनिक तकनीक, सर्जिकल दक्षता और संवेदनशील देखभाल के साथ विश्वसनीय उपचार प्रदान करते हैं।"}
+              : "सिन्हा यूरोकेयर गोरखपुर की एक प्रमुख मूत्ररोग क्लिनिक है, जहाँ किडनी स्टोन, प्रोस्टेट बढ़ना (BPH), यूरिन इन्फेक्शन (UTI), पुरुष बांझपन तथा ब्लैडर एवं किडनी ट्यूमर का आधुनिक उपचार उपलब्ध है। डॉ. सोमित कुमार सिन्हा (M.Ch Urology) के नेतृत्व में हम आधुनिक तकनीक, सर्जिकल दक्षता और संवेदनशील देखभाल के साथ विश्वसनीय उपचार प्रदान करते हैं।"}
           </p>
 
           <div className="social-icons">
@@ -65,19 +65,19 @@ function Footer({ language }) {
         {/* Column 2 - Quick Links */}
         <div className="footer-column">
           <h3>
-            {language === "en" ? "Quick Links" : "त्वरित लिंक"}
+            <u>{language === "en" ? "Quick Links" : "त्वरित लिंक"}</u>
           </h3>
 
           <ul>
             <li>
               <a href="#home">
-                {language === "en" ? "Home" : "होम"}
+                {language === "en" ? "Home" : "मुख्य पृष्ठ"}
               </a>
             </li>
 
             <li>
               <a href="#services">
-                {language === "en" ? "Services" : "सेवाएं"}
+                {language === "en" ? "Services" : "सेवाएँ"}
               </a>
             </li>
 
@@ -89,13 +89,13 @@ function Footer({ language }) {
 
             <li>
               <a href="#testimonials">
-                {language === "en" ? "Testimonials" : "प्रतिक्रिया"}
+                {language === "en" ? "Testimonials" : "प्रशंसापत्र"}
               </a>
             </li>
 
             <li>
               <a href="#youtube">
-                YouTube
+                {language === "en" ? "YouTube" : "यूट्यूब"}
               </a>
             </li>
           </ul>
@@ -104,13 +104,23 @@ function Footer({ language }) {
         {/* Column 3 - Contact + Map */}
         <div className="footer-column">
           <h3>
-            {language === "en" ? "Contact Us" : "संपर्क करें"}
+            <u>{language === "en" ? "Contact Us" : "संपर्क करें"}</u>
           </h3>
 
           <p>
-            Lower Ground Floor, Kanchanpur Tower,<br />
-            Mohaddipur, Gorakhpur,<br />
-            Uttar Pradesh 273008
+            {language === "en" ? (
+              <>
+                Lower Ground Floor, Kanchanpur Tower,<br />
+                Mohaddipur, Gorakhpur,<br />
+                Uttar Pradesh 273008
+              </>
+            ) : (
+              <>
+                लोअर ग्राउंड फ्लोर, कंचनपुर टॉवर,<br />
+                मोहद्दीपुर, गोरखपुर,<br />
+                उत्तर प्रदेश 273008
+              </>
+            )}
           </p>
 
           <p>
@@ -154,11 +164,13 @@ function Footer({ language }) {
           ? "All Rights Reserved."
           : "सर्वाधिकार सुरक्षित।"}
       </div>
+
       <p className="managed-by">
-  {language === "en"
-    ? "Managed By :- Shobhit & Riya"
-    : "प्रबंधित:- शोभित और रिया के द्वारा"}
-</p>
+        {language === "en"
+          ? "Managed By :- Shobhit & Riya"
+          : "प्रबंधित: शोभित और रिया द्वारा"}
+      </p>
+
     </footer>
   );
 }

@@ -7,6 +7,19 @@ import "swiper/css/navigation";
 
 export default function YoutubeSection({ language }) {
 
+  const text = {
+    en: {
+      title: "Follow Us on YouTube",
+      button: "Visit Our YouTube Channel"
+    },
+    hi: {
+      title: "हमारे यूट्यूब चैनल को फॉलो करें",
+      button: "हमारा यूट्यूब चैनल देखें"
+    }
+  };
+
+  const t = text[language];
+
   const videos = [
     "cXET-ioEDLA",
     "R0uYUFg0qxA",
@@ -21,9 +34,7 @@ export default function YoutubeSection({ language }) {
       <div className="container">
 
         <h2 className="section-title">
-          {language === "en"
-            ? "Follow Us on YouTube"
-            : "हमारे यूट्यूब चैनल को फॉलो करें"}
+          {t.title}
         </h2>
 
         <Swiper
@@ -61,10 +72,7 @@ export default function YoutubeSection({ language }) {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            ▶{" "}
-            {language === "en"
-              ? "Visit Our YouTube Channel"
-              : "हमारा यूट्यूब चैनल देखें"}
+            ▶ {t.button}
           </a>
         </div>
 

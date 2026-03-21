@@ -9,41 +9,94 @@ import "swiper/css/pagination";
 
 function Home({ language }) {
 
-  const whatsappMessage =
-    "Hello Sinha Uro Care, I would like to take an appointment with the doctor.";
+  const text = {
+    en: {
+      heroTitle1: "Advanced Urology Care",
+      heroTitle2: "You Can Trust",
+      heroDesc:
+        "Specialized treatment for kidney stones, prostate issues, UTI and other urological conditions with modern technology and compassionate care.",
+      book: "Book Appointment",
+      services: "Our Services",
+      patients: "Patients Treated",
+      experience: "Years Experience",
+      surgeries: "Successful Surgeries",
+      expert: "Expert in Advanced Urological Care",
 
-  const whatsappLink = (lang) =>
-    lang === "en"
-      ? `https://wa.me/919473821013?text=${encodeURIComponent(whatsappMessage)}`
-      : `https://wa.me/919473821013?text=${encodeURIComponent(
-          "नमस्ते सिन्हा यूरो केयर, मुझे डॉक्टर से अपॉइंटमेंट लेनी है।"
-        )}`;
+      specializations: "Our Specializations",
+
+      testimonials: "Patient Testimonials",
+      googleReviews: "View All Reviews on Google"
+    },
+    hi: {
+      heroTitle1: "उन्नत मूत्ररोग उपचार",
+      heroTitle2: "जिस पर आप भरोसा कर सकें",
+      heroDesc:
+        "किडनी स्टोन, प्रोस्टेट समस्याएँ, यूरिन इन्फेक्शन और अन्य मूत्ररोगों का आधुनिक तकनीक और संवेदनशील देखभाल के साथ उपचार।",
+      book: "अपॉइंटमेंट बुक करें",
+      services: "हमारी सेवाएँ",
+      patients: "उपचारित मरीज",
+      experience: "वर्षों का अनुभव",
+      surgeries: "सफल सर्जरी",
+      expert: "उन्नत मूत्ररोग उपचार विशेषज्ञ",
+
+      specializations: "हमारी विशेषज्ञताएँ",
+
+      testimonials: "मरीजों के प्रशंसापत्र",
+      googleReviews: "सभी गूगल रिव्यू देखें"
+    }
+  };
+
+  const t = text[language];
+
+  const whatsappMessage = {
+    en: "Hello Sinha Uro Care, I would like to take an appointment with the doctor.",
+    hi: "नमस्ते, मुझे डॉक्टर से अपॉइंटमेंट लेना है।"
+  };
+
+  const whatsappLink = `https://wa.me/919473821013?text=${encodeURIComponent(
+    whatsappMessage[language]
+  )}`;
 
   const reviews = [
     {
       name: "Ravi Kumar",
       rating: 5,
-      text: "Dr. Sinha provided exceptional care. The entire experience was smooth and highly professional."
+      text:
+        language === "en"
+          ? "Dr. Sinha provided exceptional care. The entire experience was smooth and highly professional."
+          : "डॉ. सिन्हा ने उत्कृष्ट देखभाल प्रदान की। पूरा अनुभव बहुत सहज और पेशेवर रहा।"
     },
     {
       name: "Neha Sharma",
       rating: 5,
-      text: "Very experienced and patient-friendly doctor. Highly recommended!"
+      text:
+        language === "en"
+          ? "Very experienced and patient-friendly doctor. Highly recommended!"
+          : "बहुत अनुभवी और मरीजों के प्रति संवेदनशील डॉक्टर। अत्यधिक अनुशंसित!"
     },
     {
       name: "Amit Singh",
       rating: 5,
-      text: "Best urologist in Gorakhpur. Excellent diagnosis and treatment."
+      text:
+        language === "en"
+          ? "Best urologist in Gorakhpur. Excellent diagnosis and treatment."
+          : "गोरखपुर के बेहतरीन यूरोलॉजिस्ट। उत्कृष्ट निदान और उपचार।"
     },
     {
       name: "Pooja Verma",
       rating: 5,
-      text: "Modern facilities and compassionate care. Truly satisfied."
+      text:
+        language === "en"
+          ? "Modern facilities and compassionate care. Truly satisfied."
+          : "आधुनिक सुविधाएँ और संवेदनशील देखभाल। पूरी तरह संतुष्ट।"
     },
     {
       name: "Manish Tiwari",
       rating: 5,
-      text: "Five-star experience! Clear explanation and great results."
+      text:
+        language === "en"
+          ? "Five-star experience! Clear explanation and great results."
+          : "पाँच सितारा अनुभव! स्पष्ट जानकारी और बेहतरीन परिणाम।"
     }
   ];
 
@@ -53,7 +106,7 @@ function Home({ language }) {
       desc:
         language === "en"
           ? "Minimally invasive treatment for kidney and ureteric stones using advanced endoscopic and laser techniques."
-          : "किडनी और यूरेटर स्टोन के लिए आधुनिक एंडोस्कोपिक और लेजर तकनीक द्वारा न्यूनतम चीरा उपचार।"
+          : "किडनी और यूरेटर स्टोन के लिए आधुनिक एंडोस्कोपिक और लेजर तकनीकों द्वारा न्यूनतम चीरा उपचार।"
     },
     {
       title: language === "en" ? "Andrology" : "एंड्रोलॉजी",
@@ -70,14 +123,14 @@ function Home({ language }) {
           : "शिशुओं और बच्चों में मूत्र संबंधी रोगों का विशेषज्ञ उपचार।"
     },
     {
-      title: language === "en" ? "Uro Oncology" : "यूरो ऑन्कोलॉजी",
+      title: language === "en" ? "Uro Oncology" : "यूरो-ऑन्कोलॉजी",
       desc:
         language === "en"
           ? "Comprehensive treatment for kidney, bladder and prostate cancers."
           : "किडनी, ब्लैडर और प्रोस्टेट कैंसर का उन्नत उपचार।"
     },
     {
-      title: language === "en" ? "Uro Gynecology" : "यूरो गायनेकोलॉजी",
+      title: language === "en" ? "Uro Gynecology" : "यूरो-गायनेकोलॉजी",
       desc:
         language === "en"
           ? "Advanced care for female urinary issues and pelvic disorders."
@@ -93,41 +146,25 @@ function Home({ language }) {
 
           <div className="hero-left">
             <h1>
-              {language === "en" ? (
-                <>
-                  Advanced <span>Urology Care</span><br />
-                  You Can Trust
-                </>
-              ) : (
-                <>
-                  उन्नत <span>मूत्ररोग उपचार</span><br />
-                  जिस पर आप भरोसा कर सकें
-                </>
-              )}
+              {t.heroTitle1} <span></span><br />
+              {t.heroTitle2}
             </h1>
 
-            <p>
-              {language === "en"
-                ? "Specialized treatment for kidney stones, prostate issues, UTI and other urological conditions with modern technology and compassionate care."
-                : "किडनी स्टोन, प्रोस्टेट समस्या, यूरिन इन्फेक्शन और अन्य मूत्ररोग रोगों का आधुनिक तकनीक और संवेदनशील देखभाल के साथ उपचार।"}
-            </p>
+            <p>{t.heroDesc}</p>
 
             <div className="hero-buttons">
 
-              {/* 🔥 WHATSAPP BUTTON FIX */}
               <a
-                href={whatsappLink(language)}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                {language === "en"
-                  ? "Book Appointment"
-                  : "अपॉइंटमेंट बुक करें"}
+                {t.book}
               </a>
 
               <a href="#services" className="btn-outline">
-                {language === "en" ? "Our Services" : "हमारी सेवाएं"}
+                {t.services}
               </a>
 
             </div>
@@ -135,17 +172,17 @@ function Home({ language }) {
             <div className="hero-stats">
               <div>
                 <h3>10,000+</h3>
-                <p>{language === "en" ? "Patients Treated" : "उपचारित मरीज"}</p>
+                <p>{t.patients}</p>
               </div>
 
               <div>
                 <h3>15</h3>
-                <p>{language === "en" ? "Years Experience" : "वर्षों का अनुभव"}</p>
+                <p>{t.experience}</p>
               </div>
 
               <div>
                 <h3>2500+</h3>
-                <p>{language === "en" ? "Successful Surgeries" : "सफल सर्जरी"}</p>
+                <p>{t.surgeries}</p>
               </div>
             </div>
           </div>
@@ -159,11 +196,7 @@ function Home({ language }) {
                 <h3>Dr. Somit Kumar Sinha</h3>
                 <p>M.Ch Urology Specialist</p>
                 <p>15 Years Experience</p>
-                <p>
-                  {language === "en"
-                    ? "Expert in Advanced Urological Care"
-                    : "उन्नत मूत्ररोग उपचार विशेषज्ञ"}
-                </p>
+                <p>{t.expert}</p>
               </div>
             </div>
           </div>
@@ -174,9 +207,7 @@ function Home({ language }) {
       {/* SPECIALIZATIONS */}
       <section id="specializations" className="services-section">
         <div className="container">
-          <h2 className="section-title">
-            {language === "en" ? "Our Specializations" : "हमारी विशेषज्ञताएँ"}
-          </h2>
+          <h2 className="section-title">{t.specializations}</h2>
 
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -205,9 +236,7 @@ function Home({ language }) {
       {/* TESTIMONIALS */}
       <section id="testimonials" className="section">
         <div className="container">
-          <h2 className="section-title">
-            {language === "en" ? "Patient Testimonials" : "मरीजों की प्रतिक्रिया"}
-          </h2>
+          <h2 className="section-title">{t.testimonials}</h2>
 
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -240,11 +269,7 @@ function Home({ language }) {
               className="google-btn"
             >
               <span className="stars">⭐⭐⭐⭐⭐</span>
-              <span className="text">
-                {language === "en"
-                  ? "View All Reviews on Google"
-                  : "सभी गूगल रिव्यू देखें"}
-              </span>
+              <span className="text">{t.googleReviews}</span>
             </a>
           </div>
 
@@ -254,4 +279,4 @@ function Home({ language }) {
   );
 }
 
-export default Home;
+export default Home;  

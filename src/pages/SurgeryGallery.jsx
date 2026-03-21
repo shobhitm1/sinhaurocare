@@ -11,17 +11,30 @@ import s2 from "../assets/surgery2.jpeg";
 import s3 from "../assets/surgery3.jpeg";
 import s4 from "../assets/surgery4.jpeg";
 
-function SurgeryGallery() {
+function SurgeryGallery({ language }) {
   const [selectedImage, setSelectedImage] = useState(null);
+
+  const text = {
+    en: {
+      title: "Surgery Highlights",
+      alt: "Surgery image"
+    },
+    hi: {
+      title: "सर्जरी की झलकियाँ",
+      alt: "सर्जरी की तस्वीर"
+    }
+  };
+
+  const t = text[language];
 
   const images = [s1, s2, s3, s4];
 
   return (
     <section className="surgery-section">
       <div className="container">
-        <h2 className="section-title">Surgery Highlights</h2>
+        <h2 className="section-title">{t.title}</h2>
 
-        {/* 🔥 SLIDER BACK */}
+        {/* SLIDER */}
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
@@ -38,7 +51,7 @@ function SurgeryGallery() {
             <SwiperSlide key={index}>
               <img
                 src={img}
-                alt="surgery"
+                alt={`${t.alt} ${index + 1}`}
                 className="surgery-img"
                 onClick={() => setSelectedImage(img)}
               />
@@ -46,7 +59,7 @@ function SurgeryGallery() {
           ))}
         </Swiper>
 
-        {/* 🔥 MODAL (ZOOM) */}
+        {/* MODAL (ZOOM) */}
         {selectedImage && (
           <div
             className="image-modal"

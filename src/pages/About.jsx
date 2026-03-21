@@ -41,35 +41,34 @@ export default function About({ language }) {
           <br />
 
           <h3 style={{ color: "#0ea5e9" }}>
-            {language === "en" ? <u>Educational Journey</u> : "शैक्षणिक योग्यता"}
+            {language === "en" ? <u>Educational Journey</u> : <u>शैक्षणिक योग्यता</u>}
           </h3>
 
           <ul>
             <li>
-              <b>MBBS</b> – B.R.D. Medical College, Gorakhpur
+              <b>MBBS</b> – {language === "en" ? "B.R.D. Medical College, Gorakhpur" : "बी.आर.डी. मेडिकल कॉलेज, गोरखपुर"}
             </li>
             <li>
-              <b>MS (General Surgery)</b> – Uttar Pradesh University of Medical Sciences,Saifai
+              <b>MS (General Surgery)</b> – {language === "en" ? "Uttar Pradesh University of Medical Sciences, Saifai" : "उत्तर प्रदेश आयुर्विज्ञान विश्वविद्यालय, सैफई"}
             </li>
-            <li>  
-              <b>M.Ch (Urology Super-Specialization)</b> – Sardar Patel Medical College,Bikaner
+            <li>
+              <b>M.Ch (Urology Super-Specialization)</b> – {language === "en" ? "Sardar Patel Medical College, Bikaner" : "सरदार पटेल मेडिकल कॉलेज, बीकानेर"}
             </li>
           </ul>
 
           <br />
 
           <h3 style={{ color: "#0ea5e9" }}>
-            {language === "en" ? <u>Areas of Expertise</u> : "विशेषज्ञता के क्षेत्र"}
+            {language === "en" ? <u>Areas of Expertise</u> : <u>विशेषज्ञता के क्षेत्र</u>}
           </h3>
 
           <ul>
-            <li>{language === "en" ? "Urology" : "मूत्ररोग"}</li>
+            <li>{language === "en" ? "Urology" : "मूत्ररोग विज्ञान"}</li>
             <li>{language === "en" ? "Andrology" : "एंड्रोलॉजी"}</li>
             <li>{language === "en" ? "Endourology" : "एंडोयूरोलॉजी"}</li>
             <li>{language === "en" ? "Pediatric Urology" : "बाल मूत्ररोग"}</li>
-            <li>{language === "en" ? "Uro Gynecology" : "यूरो गायनेकोलॉजी"}</li>
-            <li>{language === "en" ? "Uro-Oncology" : "यूरो ऑन्कोलॉजी"}
-            </li>
+            <li>{language === "en" ? "Uro Gynecology" : "यूरो-गायनेकोलॉजी"}</li>
+            <li>{language === "en" ? "Uro-Oncology" : "यूरो-ऑन्कोलॉजी"}</li>
           </ul>
 
           <br />
@@ -77,14 +76,14 @@ export default function About({ language }) {
           <p>
             {language === "en" ? (
               <>
-                Dr. Sinha has successfully performed <strong>2500+ surgeries </strong>
-                 across various urological conditions and brings years of practical excellence.
+                Dr. Sinha has successfully performed <strong>2500+ surgeries</strong>
+                across various urological conditions and brings years of practical excellence.
               </>
             ) : (
               <>
                 डॉ. सिन्हा ने विभिन्न मूत्ररोग समस्याओं में
-                <strong> 2500+ सफल सर्जरी</strong> की हैं और वर्षों का
-                व्यावहारिक अनुभव रखते हैं।
+                <strong> 2500+ सफल सर्जरी</strong> की हैं और उन्हें वर्षों का
+                व्यावहारिक अनुभव प्राप्त है।
               </>
             )}
           </p>
@@ -98,7 +97,7 @@ export default function About({ language }) {
             ) : (
               <>
                 उन्होंने मूत्ररोग से संबंधित महत्वपूर्ण विषयों पर
-                प्रतिष्ठित चिकित्सा मंचों पर शोध पत्र प्रस्तुत और प्रकाशित किए हैं।
+                प्रतिष्ठित चिकित्सा मंचों पर कई शोध पत्र प्रस्तुत और प्रकाशित किए हैं।
               </>
             )}
           </p>
@@ -112,10 +111,10 @@ export default function About({ language }) {
               </>
             ) : (
               <>
-                यदि आप किडनी स्टोन, प्रोस्टेट समस्या, यूरिन इन्फेक्शन,
+                यदि आप किडनी स्टोन, प्रोस्टेट समस्याओं, यूरिन इन्फेक्शन,
                 पुरुष बांझपन या बाल मूत्ररोग उपचार के लिए विश्वसनीय समाधान
-                चाहते हैं — डॉ. सोमित कुमार सिन्हा आपकी विशेषज्ञता,
-                नैतिकता और सहानुभूति के साथ मार्गदर्शन करेंगे।
+                चाहते हैं — डॉ. सोमित कुमार सिन्हा आपको विशेषज्ञता,
+                नैतिकता और सहानुभूति के साथ मार्गदर्शन प्रदान करते हैं।
               </>
             )}
           </p>

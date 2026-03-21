@@ -3,6 +3,34 @@ import "./Header.css";
 import logo from "../assets/logo.jpg";
 
 function Header({ darkMode, setDarkMode, language, setLanguage }) {
+
+  const text = {
+    en: {
+      tagline: "Advanced Urology Care",
+      doctor: "By Dr. Somit Kumar Sinha",
+      home: "Home",
+      specialisations: "Specialisations",
+      about: "About",
+      contact: "Contact",
+      light: "☀ Light",
+      dark: "🌙 Dark",
+      langBtn: "हिंदी"
+    },
+    hi: {
+      tagline: "उन्नत मूत्ररोग उपचार",
+      doctor: "डॉ. सोमित कुमार सिन्हा द्वारा",
+      home: "मुख्य पृष्ठ",
+      specialisations: "विशेषताएँ",
+      about: "परिचय",
+      contact: "संपर्क करें",
+      light: "☀ लाइट",
+      dark: "🌙 डार्क",
+      langBtn: "English"
+    }
+  };
+
+  const t = text[language];
+
   return (
     <header className="navbar">
       <div className="container nav-container">
@@ -11,16 +39,16 @@ function Header({ darkMode, setDarkMode, language, setLanguage }) {
           <img src={logo} alt="Sinha Urocare" className="logo-img" />
           <div className="logo-text">
             <h1>Sinha Urocare</h1>
-            <p>Advanced Urology Care</p>
-            <p className="doctor-name">By Dr. Somit Kumar Sinha</p>
+            <p>{t.tagline}</p>
+            <p className="doctor-name">{t.doctor}</p>
           </div>
         </div>
 
         <nav className="nav-links">
-          <a href="/">Home</a>
-          <a href="#specializations">Specialisations</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="/">{t.home}</a>
+          <a href="#specializations">{t.specialisations}</a>
+          <a href="#about">{t.about}</a>
+          <a href="#contact">{t.contact}</a>
         </nav>
 
         {/* TOGGLES */}
@@ -29,7 +57,7 @@ function Header({ darkMode, setDarkMode, language, setLanguage }) {
             className="toggle-btn"
             onClick={() => setDarkMode(!darkMode)}
           >
-            {darkMode ? "☀ Light" : "🌙 Dark"}
+            {darkMode ? t.light : t.dark}
           </button>
 
           <button
@@ -38,7 +66,7 @@ function Header({ darkMode, setDarkMode, language, setLanguage }) {
               setLanguage(language === "en" ? "hi" : "en")
             }
           >
-            {language === "en" ? "हिंदी" : "English"}
+            {t.langBtn}
           </button>
         </div>
 
