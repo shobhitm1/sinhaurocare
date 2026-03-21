@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import doctor from "../assets/doctor.jpg";
+import doctor from "../assets/doctor.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";

@@ -10,12 +10,11 @@ import s1 from "../assets/surgery1.jpeg";
 import s2 from "../assets/surgery2.jpeg";
 import s3 from "../assets/surgery3.jpeg";
 import s4 from "../assets/surgery4.jpeg";
-import s5 from "../assets/surgery5.jpeg";
 
 function SurgeryGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = [s1, s2, s3, s4, s5];
+  const images = [s1, s2, s3, s4];
 
   return (
     <section className="surgery-section">
