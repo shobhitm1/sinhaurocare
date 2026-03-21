@@ -348,3 +348,11 @@ section {
   text-decoration: none;   /* 🔥 important */
   display: inline-block;   /* 🔥 anchor ko button jaisa banata hai */
 }
+/* 🔥 SECTION SPACING FIX */
+#testimonials {
+  padding-bottom: 5px;
+}
+
+.services-section {
+  padding-top: 5px;
+}
