@@ -154,6 +154,11 @@ function Footer({ language }) {
           ? "All Rights Reserved."
           : "सर्वाधिकार सुरक्षित।"}
       </div>
+      <p className="managed-by">
+  {language === "en"
+    ? "Managed By :- Shobhit & Riya"
+    : "प्रबंधित:- शोभित और रिया के द्वारा"}
+</p>
     </footer>
   );
 }
