@@ -9,6 +9,8 @@
   --muted: #64748B;
 }
 
+/* ================= GLOBAL RESET ================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,27 +18,44 @@
   font-family: 'Inter', sans-serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= BODY ================= */
+
 body {
   background: var(--bg-light);
   color: var(--text-dark);
   transition: 0.4s ease;
+  overflow-x: hidden;
 }
 
+/* ================= LAYOUT ================= */
+
 .container {
+  width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
 }
 
 .section {
   padding: 100px 0;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #0EA5E9, #22D3EE);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  font-weight: 700;
 }
+
+/* ================= BUTTONS ================= */
 
 .btn {
   padding: 14px 28px;
@@ -68,25 +87,6 @@ body {
   color: white;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section {
-  padding: 100px 0;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 60px;
-  font-weight: 700;
-}
-html {
-  scroll-behavior: smooth;
-}
 /* ================= DARK MODE ================= */
 
 body.dark {
@@ -94,17 +94,9 @@ body.dark {
   color: #f1f5f9;
 }
 
-/* Hero Section */
-body.dark .hero {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-}
-
-/* Services Section */
-body.dark .services-section {
-  background: #0f172a;
-}
-
-/* Generic Section */
+/* Sections */
+body.dark .hero,
+body.dark .services-section,
 body.dark .section {
   background: #0f172a;
 }
@@ -118,7 +110,7 @@ body.dark .modal-content {
   border: 1px solid #334155;
 }
 
-/* Text Colors */
+/* Text */
 body.dark h1,
 body.dark h2,
 body.dark h3,
@@ -127,12 +119,8 @@ body.dark p {
   color: #f1f5f9;
 }
 
-/* Navbar */
-body.dark .navbar {
-  background: #0b1220;
-}
-
-/* Footer */
+/* Navbar & Footer */
+body.dark .navbar,
 body.dark .footer {
   background: #0b1220;
 }
@@ -148,29 +136,32 @@ body.dark .btn-outline:hover {
   color: #0f172a;
 }
 
-/* ================= TESTIMONIAL DARK FIX ================= */
-
+/* Testimonials */
 body.dark #testimonials {
   background: #0f172a;
-}
-
-body.dark .section-title {
-  color: #f1f5f9;
-}
-
-body.dark .testimonial-card {
-  background: #1e293b;
-  color: #f1f5f9;
 }
 
 body.dark .testimonial-text {
   color: #e2e8f0;
 }
 
-body.dark .testimonial-meta span {
-  color: #f1f5f9;
-}
-
 body.dark .google-reviews-link a {
   color: #38bdf8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
 }
