@@ -11,10 +11,12 @@ function Home({ language }) {
 
   const text = {
     en: {
-      heroTitle1: "Advanced Urology Care",
+      // 🔥 SEO OPTIMIZED
+      heroTitle1: "Advanced Urology Care in Gorakhpur",
       heroTitle2: "You Can Trust",
       heroDesc:
-        "Specialized treatment for kidney stones, prostate issues, UTI and other urological conditions with modern technology and compassionate care.",
+        "Expert urologist in Gorakhpur providing advanced treatment for kidney stones, prostate problems, UTI and other urological conditions using modern technology and patient-focused care.",
+
       book: "Book Appointment",
       services: "Our Services",
       patients: "Patients Treated",
@@ -26,10 +28,12 @@ function Home({ language }) {
       googleReviews: "View All Reviews on Google"
     },
     hi: {
-      heroTitle1: "उन्नत मूत्ररोग उपचार",
+      // 🔥 SEO + NATURAL HINDI
+      heroTitle1: "गोरखपुर में उन्नत मूत्ररोग उपचार",
       heroTitle2: "जिस पर आप भरोसा कर सकें",
       heroDesc:
-        "किडनी स्टोन, प्रोस्टेट समस्याएँ, यूरिन इन्फेक्शन और अन्य मूत्ररोगों का आधुनिक तकनीक और संवेदनशील देखभाल के साथ उपचार।",
+        "गोरखपुर के अनुभवी यूरोलॉजिस्ट द्वारा किडनी स्टोन, प्रोस्टेट समस्या, यूरिन इन्फेक्शन और अन्य मूत्ररोगों का आधुनिक तकनीक और मरीज-केंद्रित देखभाल के साथ उपचार।",
+
       book: "अपॉइंटमेंट बुक करें",
       services: "हमारी सेवाएँ",
       patients: "उपचारित मरीज",
@@ -154,35 +158,15 @@ function Home({ language }) {
             <p>{t.heroDesc}</p>
 
             <div className="hero-buttons">
-
-              {/* 🔥 FIXED BUTTON */}
               <a href="#" onClick={handleWhatsappClick} className="btn-primary">
                 {t.book}
               </a>
 
-              {/* 🔥 FIXED LINK */}
               <a href="#specializations" className="btn-outline">
                 {t.services}
               </a>
-
             </div>
 
-            <div className="hero-stats">
-              <div>
-                <h3>10,000+</h3>
-                <p>{t.patients}</p>
-              </div>
-
-              <div>
-                <h3>15</h3>
-                <p>{t.experience}</p>
-              </div>
-
-              <div>
-                <h3>2500+</h3>
-                <p>{t.surgeries}</p>
-              </div>
-            </div>
           </div>
 
           {/* DOCTOR */}
