@@ -24,13 +24,23 @@ function Header({ darkMode, setDarkMode, language, setLanguage }) {
           </div>
         </a>
 
-        {/* NAV LINKS */}
         <nav className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#specializations">Specialisations</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+  <a href="#home">
+    {language === "en" ? "Home" : "होम"}
+  </a>
+
+  <a href="#specializations">
+    {language === "en" ? "Specialisations" : "विशेषताएँ"}
+  </a>
+
+  <a href="#about">
+    {language === "en" ? "About" : "हमारे बारे में"}
+  </a>
+
+  <a href="#contact">
+    {language === "en" ? "Contact" : "संपर्क करें"}
+  </a>
+</nav>
 
         {/* TOGGLES */}
         <div className="toggle-wrapper">
