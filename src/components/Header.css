@@ -203,3 +203,28 @@
     padding-top: 8px;
   }
 }
+.logo-wrapper {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* ❌ inherit hata diya, ab custom color */
+.logo-text h1 {
+  color: #ffffff; /* ya jo tera original white/blue tha */
+}
+
+.logo-text p {
+  color: #cfd8dc; /* subtitle */
+}
+
+.logo-text .doctor-name {
+  color: #00c6ff; /* 🔥 ye tera blue highlight wapas */
+}
+
+/* remove purple/underline */
+.logo-wrapper:visited,
+.logo-wrapper:active,
+.logo-wrapper:hover {
+  text-decoration: none;
+}

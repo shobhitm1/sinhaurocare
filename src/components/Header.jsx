@@ -4,70 +4,55 @@ import logo from "../assets/logo.jpg";
 
 function Header({ darkMode, setDarkMode, language, setLanguage }) {
 
-  const text = {
-    en: {
-      tagline: "Advanced Urology Care",
-      doctor: "By Dr. Somit Kumar Sinha",
-      home: "Home",
-      specialisations: "Specialisations",
-      about: "About",
-      contact: "Contact",
-      light: "☀ Light",
-      dark: "🌙 Dark",
-      langBtn: "हिंदी"
-    },
-    hi: {
-      tagline: "उन्नत मूत्ररोग उपचार",
-      doctor: "डॉ. सोमित कुमार सिन्हा द्वारा",
-      home: "मुख्य पृष्ठ",
-      specialisations: "विशेषताएँ",
-      about: "परिचय",
-      contact: "संपर्क करें",
-      light: "☀ लाइट",
-      dark: "🌙 डार्क",
-      langBtn: "English"
-    }
-  };
-
-  const t = text[language];
-
   return (
     <header className="navbar">
       <div className="container nav-container">
 
-        <div className="logo-wrapper">
+        {/* 🔥 LOGO CLICKABLE */}
+        <a
+          href="https://linktr.ee/sinhaurocare"  // 👉 apna linktree yaha daal dena
+          target="_blank"
+          rel="noopener noreferrer"
+          className="logo-wrapper"
+        >
           <img src={logo} alt="Sinha Urocare" className="logo-img" />
+
           <div className="logo-text">
             <h1>Sinha Urocare</h1>
-            <p>{t.tagline}</p>
-            <p className="doctor-name">{t.doctor}</p>
+            <p>Advanced Urology Care</p>
+            <p className="doctor-name">By Dr. Somit Kumar Sinha</p>
           </div>
-        </div>
+        </a>
 
+        {/* NAV LINKS */}
         <nav className="nav-links">
-          <a href="#home">{t.home}</a>
-          <a href="#specializations">{t.specialisations}</a>
-          <a href="#about">{t.about}</a>
-          <a href="#contact">{t.contact}</a>
+          <a href="#home">Home</a>
+          <a href="#specializations">Specialisations</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         {/* TOGGLES */}
         <div className="toggle-wrapper">
+          
+          {/* DARK MODE */}
           <button
             className="toggle-btn"
             onClick={() => setDarkMode(!darkMode)}
           >
-            {darkMode ? t.light : t.dark}
+            {darkMode ? "☀️ Light" : "🌙 Dark"}
           </button>
 
+          {/* LANGUAGE */}
           <button
             className="toggle-btn"
             onClick={() =>
               setLanguage(language === "en" ? "hi" : "en")
             }
           >
-            {t.langBtn}
+            {language === "en" ? "हिंदी" : "English"}
           </button>
+
         </div>
 
       </div>
