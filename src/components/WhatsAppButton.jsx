@@ -2,15 +2,16 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import "./WhatsAppButton.css";
 
-function WhatsAppButton() {
+function WhatsAppButton({ language }) {
 
   const phoneNumber = "919473821013";
 
   const message =
-    "Hello Sinha Uro Care , I would like to take an appointment with doctor.";
+    language === "hi"
+      ? "नमस्ते, मुझे डॉक्टर से अपॉइंटमेंट लेना है।"
+      : "Hello Sinha Uro Care, I would like to take an appointment with the doctor.";
 
-  const whatsappLink =
-    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <a

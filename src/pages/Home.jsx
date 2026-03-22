@@ -21,9 +21,7 @@ function Home({ language }) {
       experience: "Years Experience",
       surgeries: "Successful Surgeries",
       expert: "Expert in Advanced Urological Care",
-
       specializations: "Our Specializations",
-
       testimonials: "Patient Testimonials",
       googleReviews: "View All Reviews on Google"
     },
@@ -38,9 +36,7 @@ function Home({ language }) {
       experience: "वर्षों का अनुभव",
       surgeries: "सफल सर्जरी",
       expert: "उन्नत मूत्ररोग उपचार विशेषज्ञ",
-
       specializations: "हमारी विशेषज्ञताएँ",
-
       testimonials: "मरीजों के प्रशंसापत्र",
       googleReviews: "सभी गूगल रिव्यू देखें"
     }
@@ -48,14 +44,19 @@ function Home({ language }) {
 
   const t = text[language];
 
-  const whatsappMessage = {
-    en: "Hello Sinha Uro Care, I would like to take an appointment with the doctor.",
-    hi: "नमस्ते, मुझे डॉक्टर से अपॉइंटमेंट लेना है।"
-  };
+  // 🔥 FINAL WHATSAPP FIX (NO BUG EVER)
+  const handleWhatsappClick = (e) => {
+    e.preventDefault();
 
-  const whatsappLink = `https://wa.me/919473821013?text=${encodeURIComponent(
-    whatsappMessage[language]
-  )}`;
+    const message =
+      language === "hi"
+        ? "नमस्ते, मुझे डॉक्टर से अपॉइंटमेंट लेना है।"
+        : "Hello Sinha Uro Care, I would like to take an appointment with the doctor.";
+
+    const url = `https://wa.me/919473821013?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+  };
 
   const reviews = [
     {
@@ -146,7 +147,7 @@ function Home({ language }) {
 
           <div className="hero-left">
             <h1>
-              {t.heroTitle1} <span></span><br />
+              {t.heroTitle1} <br />
               {t.heroTitle2}
             </h1>
 
@@ -154,16 +155,13 @@ function Home({ language }) {
 
             <div className="hero-buttons">
 
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
+              {/* 🔥 FIXED BUTTON */}
+              <a href="#" onClick={handleWhatsappClick} className="btn-primary">
                 {t.book}
               </a>
 
-              <a href="#services" className="btn-outline">
+              {/* 🔥 FIXED LINK */}
+              <a href="#specializations" className="btn-outline">
                 {t.services}
               </a>
 
@@ -279,4 +277,4 @@ function Home({ language }) {
   );
 }
 
-export default Home;  
+export default Home;

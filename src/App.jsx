@@ -28,15 +28,13 @@ function App() {
         language={language}
         setLanguage={setLanguage}
       />
-
       <Home language={language} />
       <Services language={language} />
       <About language={language} />
       <SurgeryGallery language={language} />
       <YoutubeSection language={language} />
       <Footer language={language} />
-
-      <WhatsAppButton />
+      <WhatsAppButton language={language} />
     </>
   );
 }
