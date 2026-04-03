@@ -22,7 +22,7 @@ function Home({ language }) {
       patients: "Patients Treated",
       experience: "Years Experience",
       surgeries: "Successful Surgeries",
-      expert: "Expert in Advanced Urological Care",
+      expert: "Expert in Advanced Urology Treatments & Surgeries",
       specializations: "Our Specializations",
       testimonials: "Patient Testimonials",
       googleReviews: "View All Reviews on Google"
@@ -39,7 +39,7 @@ function Home({ language }) {
       patients: "उपचारित मरीज",
       experience: "वर्षों का अनुभव",
       surgeries: "सफल सर्जरी",
-      expert: "उन्नत मूत्ररोग उपचार विशेषज्ञ",
+      expert: "उन्नत मूत्ररोग उपचार एवं सर्जरी विशेषज्ञ",
       specializations: "हमारी विशेषज्ञताएँ",
       testimonials: "मरीजों के प्रशंसापत्र",
       googleReviews: "सभी गूगल रिव्यू देखें"
@@ -106,42 +106,42 @@ function Home({ language }) {
   ];
 
   const specializations = [
-    {
-      title: language === "en" ? "Endourology" : "एंडोयूरोलॉजी",
-      desc:
-        language === "en"
-          ? "Minimally invasive treatment for kidney and ureteric stones using advanced endoscopic and laser techniques."
-          : "किडनी और यूरेटर स्टोन के लिए आधुनिक एंडोस्कोपिक और लेजर तकनीकों द्वारा न्यूनतम चीरा उपचार।"
-    },
-    {
-      title: language === "en" ? "Andrology" : "एंड्रोलॉजी",
-      desc:
-        language === "en"
-          ? "Specialized management of male infertility and reproductive health."
-          : "पुरुष बांझपन और प्रजनन स्वास्थ्य का विशेषज्ञ उपचार।"
-    },
-    {
-      title: language === "en" ? "Pediatric Urology" : "बाल मूत्ररोग",
-      desc:
-        language === "en"
-          ? "Expert care for urological conditions in infants and children."
-          : "शिशुओं और बच्चों में मूत्र संबंधी रोगों का विशेषज्ञ उपचार।"
-    },
-    {
-      title: language === "en" ? "Uro Oncology" : "यूरो-ऑन्कोलॉजी",
-      desc:
-        language === "en"
-          ? "Comprehensive treatment for kidney, bladder and prostate cancers."
-          : "किडनी, ब्लैडर और प्रोस्टेट कैंसर का उन्नत उपचार।"
-    },
-    {
-      title: language === "en" ? "Uro Gynecology" : "यूरो-गायनेकोलॉजी",
-      desc:
-        language === "en"
-          ? "Advanced care for female urinary issues and pelvic disorders."
-          : "महिलाओं में मूत्र समस्याओं और पेल्विक विकारों का उन्नत उपचार।"
-    }
-  ];
+  {
+    title: language === "en" ? "Endourology" : "एंडोयूरोलॉजी",
+    desc:
+      language === "en"
+        ? "Advanced minimally invasive procedures for kidney and urinary tract conditions, including PCNL, Mini PCNL, URS, TURP, and TURBT for effective stone and prostate management."
+        : "किडनी और मूत्र मार्ग की बीमारियों के लिए उन्नत न्यूनतम चीरा तकनीकें जैसे PCNL, Mini PCNL, URS, TURP और TURBT, जिससे पथरी और प्रोस्टेट का प्रभावी उपचार किया जाता है।"
+  },
+  {
+    title: language === "en" ? "Uro Gynecology" : "यूरो-गायनेकोलॉजी",
+    desc:
+      language === "en"
+        ? "Specialized treatment for female urinary and pelvic disorders, including advanced surgical procedures like VVF (Vesicovaginal Fistula) repair."
+        : "महिलाओं में मूत्र और पेल्विक विकारों का विशेष उपचार, जिसमें VVF (वेसिकोवैजाइनल फिस्टुला) रिपेयर जैसी उन्नत सर्जरी शामिल है।"
+  },
+  {
+    title: language === "en" ? "Pediatric Urology" : "बाल मूत्ररोग",
+    desc:
+      language === "en"
+        ? "Comprehensive urological care for infants and children, including hypospadias repair, VUR correction, and pyeloplasty."
+        : "शिशुओं और बच्चों के लिए सम्पूर्ण मूत्र रोग उपचार, जिसमें हाइपोस्पेडियस रिपेयर, VUR करेक्शन और पायलोप्लास्टी शामिल हैं।"
+  },
+  {
+    title: language === "en" ? "Uro Oncology" : "यूरो-ऑन्कोलॉजी",
+    desc:
+      language === "en"
+        ? "Expert surgical management of urological cancers, including nephrectomy and cystectomy for kidney and bladder cancer treatment."
+        : "किडनी और ब्लैडर कैंसर के लिए विशेषज्ञ सर्जिकल उपचार, जिसमें नेफ्रेक्टॉमी और सिस्टेक्टॉमी जैसी प्रक्रियाएं शामिल हैं।"
+  },
+  {
+    title: language === "en" ? "Andrology" : "एंड्रोलॉजी",
+    desc:
+      language === "en"
+        ? "Specialized care for male reproductive health and infertility, including advanced procedures like varicocele repair."
+        : "पुरुष प्रजनन स्वास्थ्य और बांझपन के लिए विशेष उपचार, जिसमें वैरिकोसील रिपेयर जैसी उन्नत प्रक्रियाएं शामिल हैं।"
+  }
+];
 
   return (
     <>
@@ -176,8 +176,7 @@ function Home({ language }) {
 
               <div className="doctor-overlay">
                 <h3>Dr. Somit Kumar Sinha</h3>
-                <p>M.Ch Urology Specialist</p>
-                <p>15 Years Experience</p>
+                <p>M.Ch Urologist</p>
                 <p>{t.expert}</p>
               </div>
             </div>
